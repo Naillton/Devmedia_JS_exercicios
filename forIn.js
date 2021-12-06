@@ -42,13 +42,16 @@ for(let contador = 0; contador < produtos.length; contador++){
 
         if(propriedade == "preco"){
 
-            let novo_preco = produto.preco - desconto;
+            let preco = propriedade;
+
+            let novo_preco = produto[preco] - desconto;
 
             console.log("preco atualizado: R$"+novo_preco+",00");
         }else{
 
-            console.log(propriedade+": "+produto.preco);
+            console.log(propriedade+": "+produto[propriedade]);
         }
+
     }
 
     console.log("\n");
