@@ -11,3 +11,30 @@ let crase = `Esse e um texto sem o barra n
 Podemos pular uma linha dessa forma
 Tornando o texto mais legivel.`
 console.log(crase)
+//outra forma de tornar o codigo mais legivel e usar a concatenacao do template string
+let nomeP = `Nailton`
+let tecnologia = `JavaScript`
+let fraseDois = `O programador ${nomeP} domina a tecnologia ${tecnologia}`
+console.log(fraseDois);
+
+let linguagem = "JavaScript";
+let stack = "mobile";
+let msg = "";
+
+switch (stack) {
+  case "back-end":
+    console.log(`Estude Node.js para programação ${ stack } em ${ linguagem }`);
+    break;
+
+  case "front-end":
+    console.log(`Estude React para programação ${ stack } em ${ linguagem }`);
+    break;
+
+  case "mobile":
+    console.log(`Estude React Native para programação ${ stack } em ${ linguagem }`);
+    break;
+
+  default:
+    console.log(`Tecnologia indisponível para ${ stack }`);
+    break;
+}
