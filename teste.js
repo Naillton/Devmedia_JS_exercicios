@@ -1,5 +1,12 @@
+function retorna_mensalidade()
+{
+    
+return 50
 
-const hoje = new Date();
-const diferencaHoras = hoje.getHours() / 60;
+}
 
-console.log('Diferença de horário: ' + diferencaHoras + ' horas');
+let valor_mensalidade = retorna_mensalidade();
+
+console.log("O valor da mensalidade é: " + 
+valor_mensalidade.toFixed(2)
+ );
