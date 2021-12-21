@@ -15,7 +15,7 @@ const nomeJogos = jogos.reduce(returnNome, '');
 
 console.log(nomeJogos.slice(0, -2));
 
-///////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
 
 const itensCarrinho = [
     {id: 1, nome: 'Acucar', estoque: 100, ativo: true, valor: 2.00},
