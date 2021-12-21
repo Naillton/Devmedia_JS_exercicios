@@ -1,6 +1,7 @@
 //com o .push conseguimos inserir valores em um array
 const nomes = ["Nailton", "Marilia", "Marcelo", "Ragnar"];
 nomes.push("bjorn");
+nomes[2] = "Cleria";
 console.log(nomes);
 
 const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
