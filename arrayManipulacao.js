@@ -13,7 +13,7 @@ const diaSemana = [
 console.log(diaSemana) */
 
 //com o .map percorremos os valores de um array
-//com o .map temoa basicamente o mesmo retorno de um for of
+//com o .map tem basicamente o mesmo retorno de um for of
 /* for(let dias of diaSemana){
     console.log(dias)
 } */
