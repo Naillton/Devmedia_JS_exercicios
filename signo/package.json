@@ -1,0 +1,4 @@
+{
+    "//": "usamos o module no arquivo pacakge.json para indicar que usaremos um modulo na pasta, sempre lembrar de criar o arquivo na raiz",
+    "type": "module"
+}
