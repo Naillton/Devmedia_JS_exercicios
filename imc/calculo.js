@@ -1,4 +1,5 @@
 import {imc, state} from "./funcao.js"
+import {validaPeso, validaAltura} from "./valida.js"
 
 let peso = 10
 let altura = 1.80
