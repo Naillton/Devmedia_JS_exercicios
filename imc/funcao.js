@@ -1,7 +1,10 @@
+import formata from './formataados.js';
+
 function imc(peso, altura){
 
     let imc = peso / (altura * 2)
-    return imc
+    let imcFormat = formata(imc);
+    return imcFormat
 }
 
 function state(imc){
