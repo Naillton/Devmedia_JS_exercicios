@@ -1,37 +1,11 @@
 import chuvasDeMeteoros from './data/chuvas-de-meteoros.js'
 import imprimeListaChuva from './funcoes/funcoesInterface.js'
+import { verificaChuvaOcorrendo, verificaProximaChuva } from './funcoes/funcoesLogicas.js';
 
 const dataAtual = new Date();
 
-const chuvasVisiveis = chuvasDeMeteoros.filter( (chuva) => {
-  const anoAtual = dataAtual.getFullYear();
-
-  const dataInicio = new Date(chuva.inicio + '/' + anoAtual);
-  const dataFim = new Date(chuva.fim + '/' + anoAtual);
-
-  if(dataInicio.getMonth() > dataFim.getMonth() ){
-    const anoFinal = dataFim.getFullYear();
-    dataFim.setFullYear(anoFinal + 1);
-  }
-
-  return ( dataAtual >= dataInicio && dataAtual <= dataFim)
-});
-
-const proximaChuva = chuvasDeMeteoros.filter( (chuva) => {
-  const dt = dataAtual
-  const anoAtual = dt.getFullYear();
-  const dataInicio = new Date(chuva.inicio + '/' + anoAtual);
-  const dataFim = new Date(dt);
-
-  if(dt.getMonth() > dataInicio.getMonth() ){
-    const anoFinal = dataInicio.getFullYear();
-    dataInicio.setFullYear(anoFinal + 1);
-  }
-
-  dataFim.setMonth( dataFim.getMonth() + 2);
-
-  return (dataInicio > dt && dataInicio < dataFim)
-});
+const chuvasVisiveis = chuvasDeMeteoros.filter( (chuva) =>  verificaChuvaOcorrendo(chuva, dataAtual));
+const proximaChuva = chuvasDeMeteoros.filter( (chuva) => verificaProximaChuva(chuva, dataAtual));
 
 console.log('Chuva de meteoros');
 
